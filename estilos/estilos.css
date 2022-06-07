@@ -1,0 +1,678 @@
+/*_____________________ GENERAL ___________________*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bebas+Neue&family=Cinzel&family=Montserrat:wght@100;300&family=PT+Serif&family=Roboto:wght@300&family=Suez+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(211, 177, 146)
+}
+
+header#headerInicio {
+    grid-area: header1;
+
+}
+
+section#especialidadesInicio {
+    grid-area: especialidades;
+}
+
+main#contactoInicio {
+    grid-area: contacto;
+}
+
+section#redesInicio {
+    grid-area: redes;
+}
+
+section#ubicacionInicio {
+    grid-area: ubicacion;
+
+}
+
+footer#pie {
+    grid-area: footer;
+}
+
+@media (min-width: 1px) {
+
+    /* Áreas con grid- INDEX */
+    /* GENERAL */
+
+    #paginaInicio {
+        display: grid;
+        grid-template-areas:
+            "header1         header1"
+            "especialidades  especialidades"
+            "contacto        contacto"
+            "redes           ubicacion"
+            "footer          footer";
+
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 40vh 143vh 70vh 50vh 25vh;
+    }
+
+    /* separación / colores de cada sección / área */
+
+    section {
+        margin-top: 50px;
+        background-color: rgb(53, 4, 4);
+    }
+
+    main {
+        margin-top: 50px;
+    }
+
+    footer {
+        margin-top: 50px;
+        background-color: black;
+        color: white;
+    }
+
+    .titulos_secciones_inicio {
+        font-family: 'Cinzel', serif;
+        font-size: 40px;
+        color: white;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    /* _____________________ HEADER ___________________ */
+
+    header#headerInicio {
+        background-image: url(../img/fondo\ madera\ pino.jpg );
+        padding: 10px;
+    }
+
+    .titulo {
+        font-family: 'Cinzel', serif;
+        font-size: 90px;
+        text-align: center;
+        color: black;
+        margin: 40px 0 0 0;
+        background-color: rgb(53, 4, 4);
+        color: rgb(141, 122, 11);
+
+    }
+
+    .subtitulo {
+        font-family: 'Montserrat';
+        font-size: 30px;
+        text-align: center;
+        color: rgb(53, 4, 4);
+
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin: 30px 10px 0 10px;
+
+    }
+
+    header nav ul {
+        text-align: end;
+
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: rgb(53, 4, 4);
+        font-weight: 1000;
+    }
+
+    /* _____________________ SECCIÓN ESPECIALIDADES ___________________ */
+
+    #fotosEspecialidades {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    #tituloEspecialidades {
+        background-color: rgb(141, 122, 11);
+        padding-top: 5px;
+    }
+
+    .imgEspecialidades {
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 300px;
+        max-height: 300px;
+        margin: 20px 10px 10px 10px;
+        border: solid 1px rgb(141, 122, 11);
+    }
+
+    .nombreDeEspecialidad {
+        background-color: white;
+        color: rgb(141, 122, 11);
+        ;
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        padding: 5px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    /* _____________________ CONTACTO ___________________ */
+
+    #contactoInicio {
+        background-image: url(../img/fondo2.jpg);
+        background-size: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #tituloContacto {
+        margin: 10px 10px;
+        font-size: 80px;
+    }
+
+    #botonContacto {
+        font-size: 25px;
+        font-family: 'Cinzel', serif;
+        background-color: rgb(53, 4, 4);
+        color: rgb(141, 122, 11);
+        border: solid 1px rgb(141, 122, 11);
+        border-radius: 15px;
+        margin-bottom: 70px;
+        padding: 40px;
+    }
+
+
+    /* _____________________ REDES ___________________ */
+
+    #redesInicio {
+        margin-right: 30px;
+    }
+
+    #iconosRedes {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    #iconosRedes i {
+        font-size: 80px;
+        color: rgb(141, 122, 11);
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .nombreRedSocial {
+        font-size: 15px;
+        text-align: center;
+        color: rgb(141, 122, 11);
+        margin-top: 10px
+    }
+
+    /* _____________________ UBICACION ___________________ */
+    /* todavia no se poer un mapa de maps */
+
+    /* _____________________ FOOTER ___________________ */
+
+    #pie {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #derechosReservados {
+        width: 34%;
+        text-align: center;
+        font: 18px;
+    }
+
+    #paginaFooter {
+        width: 33%;
+        text-align: center;
+    }
+
+    .redesFooter {
+        width: 33%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .redesFooter i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .nombreRedSocialPie {
+        font-size: 10px;
+
+    }
+
+}
+
+
+
+
+
+@media(max-width: 1023px) {
+
+    /* GENERAL */
+
+
+
+    #paginaInicio {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 40vh 112vh 50vh 50vh 20vh;
+    }
+
+
+    /* separación / colores de cada sección / área */
+
+    section {
+        margin-top: 30px;
+    }
+
+    main {
+        margin-top: 30px;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+
+    .titulos_secciones_inicio {
+        font-size: 30px;
+    }
+
+    /* _____________________ HEADER ___________________ */
+
+    .titulo {
+        font-size: 70px;
+    }
+
+    /* _____________________ SECCIÓN ESPECIALIDADES ___________________ */
+
+    #fotosEspecialidades {
+        margin-top: 15px;
+    }
+
+    .imgEspecialidades {
+        min-width: 240px;
+        max-width: 240px;
+        min-height: 240px;
+        max-height: 240px;
+        margin: 20px 5px 5px 5px;
+    }
+
+    .nombreDeEspecialidad {
+        font-size: 15px;
+        padding: 3px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    /* _____________________ CONTACTO ___________________ */
+
+    #tituloContacto {
+        font-size: 60px;
+    }
+
+    #botonContacto {
+        font-size: 15px;
+
+    }
+
+    /* _____________________ REDES ___________________ */
+
+    #redesInicio {
+        margin-right: 20px;
+    }
+
+    #iconosRedes i {
+        font-size: 60px;
+    }
+
+
+
+    /* _____________________ UBICACION ___________________ */
+    /* todavia no se poer un mapa de maps */
+
+    /* _____________________ FOOTER ___________________ */
+
+
+    #derechosReservados {
+        font-size: 14px;
+    }
+
+    #paginaFooter {
+        font-size: 20px;
+    }
+
+    .redesFooter i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .nombreRedSocialPie {
+        font-size: 10px;
+
+    }
+
+}
+
+@media(max-width: 899px) {
+
+    /* GENERAL */
+    #paginaInicio {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 40vh 93vh 40vh 50vh 20vh;
+    }
+
+    /* _____________________ HEADER ___________________ */
+
+    #headerInicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* _____________________ SECCIÓN ESPECIALIDADES ___________________ */
+
+    .imgEspecialidades {
+        min-width: 180px;
+        max-width: 180px;
+        min-height: 180px;
+        max-height: 180px;
+        margin: 20px 5px 5px 5px;
+    }
+
+    /* _____________________ CONTACTO ___________________ */
+    /* cambio el alto del fondo de contacto p/ "background-image" */
+
+    #tituloContacto {
+
+        font-size: 40px;
+    }
+
+    #botonContacto {
+        font-size: 15px;
+        padding: 30px 20px 30px 20px;
+    }
+
+    /* _____________________ REDES ___________________ */
+    /* cambio tamaño de fuente de iconos y nombres de redes */
+
+    #iconosRedes i {
+        font-size: 40px;
+    }
+
+    .nombreRedSocial {
+        font-size: 12px;
+    }
+
+}
+
+
+
+
+
+@media(max-width:600px) {
+
+    /* GENERAL */
+    #paginaInicio {
+        grid-template-areas:
+            "header1        header1"
+            "especialidades especialidades"
+            "contacto       contacto"
+            "redes          ubicacion"
+            "footer         footer";
+
+        grid-template-columns: 40% auto;
+        grid-template-rows: 37vh 142vh 30vh 65vh 30vh;
+    }
+
+    .titulos_secciones_inicio {
+        font-size: 20px;
+    }
+
+    section {
+        margin-top: 15px;
+    }
+
+    main {
+        margin-top: 15px;
+    }
+
+    footer {
+        margin-top: 15px;
+    }
+
+    /* _____________________  HEADER  ___________________ */
+
+
+    /* _____________________ SECCIÓN ESPECIALIDADES ___________________ */
+
+    .imgEspecialidades {
+        min-width: 210px;
+        max-width: 210px;
+        min-height: 210px;
+        max-height: 210px;
+    }
+
+    #fotosEspecialidades {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    #fotosEspecialidades {
+        margin-top: 10px;
+    }
+
+
+    .nombreDeEspecialidad {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+
+    /* _____________________ CONTACTO ___________________ */
+
+    #tituloContacto {
+        font-size: 37px;
+        margin-bottom: 0;
+    }
+
+    #botonContacto {
+        margin-bottom: 20px;
+    }
+
+    /* _____________________ REDES ___________________ */
+
+    #iconosRedes {
+        flex-direction: column;
+    }
+
+    #iconosRedes i {
+        font-size: 30px;
+    }
+
+    .nombreRedSocial {
+        font-size: 15px;
+    }
+
+    /* _____________________ FOOTER ___________________ */
+
+    #pie {
+        flex-direction: column;
+    }
+
+    #derechosReservados {
+        font-size: 10px;
+    }
+
+    #paginaFooter {
+        font-size: 15px;
+    }
+
+    .redesFooter {
+        width: 70%;
+    }
+
+    .redesFooter i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .nombreRedSocialPie {
+        font-size: 10px;
+
+    }
+
+}
+
+
+@media(max-width:480px) {
+
+    /* GENERAL */
+    #paginaInicio {
+        grid-template-areas:
+            "header1        "
+            "especialidades "
+            "contacto       "
+            "redes          "
+            "ubicacion"
+            "footer         ";
+
+        grid-template-columns: 100%;
+        grid-template-rows: 33vh 284vh 40vh 87vh 50vh 30vh;
+    }
+
+    .titulos_secciones_inicio {
+        font-size: 25px;
+    }
+
+    section {
+        margin-top: 30px;
+    }
+
+    main {
+        margin-top: 30px;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+
+    /* _____________________  HEADER  ___________________ */
+
+    .titulo {
+        font-size: 50px;
+        margin-top: 5px;
+    }
+
+    /* VA MENÚ HAMBURGUESA} */
+    header nav ul {
+        flex-direction: row;
+    }
+
+    /* VA MENÚ HAMBURGUESA} */
+
+
+    /* _____________________ SECCIÓN ESPECIALIDADES ___________________ */
+
+    .imgEspecialidades {
+        min-width: 210px;
+        max-width: 210px;
+        min-height: 210px;
+        max-height: 210px;
+    }
+
+     /* O EN DEFECTO, CARRUSEL DE FOTOS */
+    #fotosEspecialidades {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+    /* O EN DEFECTO, CARRUSEL DE FOTOS */
+
+    #fotosEspecialidades {
+        margin-top: 10px;
+    }
+
+
+    .nombreDeEspecialidad {
+        font-size: 17px;
+        padding: 5px;
+        margin-bottom: 20px;
+
+    }
+
+    /* _____________________ CONTACTO ___________________ */
+
+
+    #contactoInicio {
+        background-image: url(../img/fondo\ contacto\ cuadrado.png);
+    }
+
+    /* _____________________ REDES ___________________ */
+
+    #redesInicio {
+        margin-right: 0px;
+    }
+
+    #iconosRedes i {
+        font-size: 60px;
+    }
+
+    .nombreRedSocial {
+        font-size: 20px;
+    }
+
+
+    /* _____________________ FOOTER ___________________ */
+
+    #pie {
+        flex-direction: column;
+    }
+
+    #derechosReservados {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    #paginaFooter {
+        font-size: 15px;
+    }
+
+    .redesFooter {
+        width: 70%;
+    }
+
+    .redesFooter i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .nombreRedSocialPie {
+        font-size: 10px;
+
+    }
+
+
+}
