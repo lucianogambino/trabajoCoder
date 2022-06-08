@@ -38,6 +38,35 @@ footer#pie {
     grid-area: footer;
 }
 
+.cajaEspecilidades:hover{
+
+    transform: scale(1.1);
+    transition: 2s;
+
+}
+
+.cajaRedes:hover{
+    transform:translateY(-30px) ;
+    transition: 2s;
+}
+
+#botonContacto:hover {
+    animation: boton 4s;
+}
+
+@keyframes boton{
+25% { 
+transform: scale(1.5);
+
+}
+
+50% {
+transform: scale(1.3);
+border-radius: 40px;
+
+}
+}
+
 @media (min-width: 1px) {
 
     /* Áreas con grid- INDEX */
